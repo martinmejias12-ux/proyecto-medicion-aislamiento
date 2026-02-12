@@ -1,0 +1,190 @@
+/*RESET UNIVERSAL*/
+*, *::before, *::after {
+  box-sizing: border-box;
+
+  font-family: 'Times New Roman', Times, serif;
+  /*margin: 0;
+  padding: 0;*/
+}
+
+
+body{
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(150px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+
+  margin: 20px;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/4;
+  grid-row: 1/2;
+
+  height: 300px;
+  text-align: center;
+  
+
+  /*border-style: solid;*/
+  width: 100%;
+
+  /*background-color: #7575751a;*/
+
+  background-color: rgb(232, 236, 236)
+
+ 
+
+
+}
+
+nav{
+  grid-column: 1/4;
+  grid-row: 2/3;
+
+  /*border-style: solid;*/
+  width: 100%;
+  height: 100%;
+  
+  background-color: rgb(226, 240, 240)
+
+  
+}
+
+
+main{
+  grid-column: 1/3;
+  grid-row: 3/4;
+
+  
+}
+
+aside{
+  grid-column: 3/4;
+  grid-row: 3/4;
+  align-self: self-start;
+
+  border-style: solid;
+
+  width: 450px;
+  height: 100%;
+
+  margin-top: 20px;
+  
+  padding: 10px;
+  
+}
+
+
+footer{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  
+  grid-column: 1/4;
+  grid-row: 4/5;
+  
+  height: 400px;
+  
+  /*border-style: solid;*/
+  width: 100%;
+
+  margin-top: 20px;
+
+  background-color: rgb(195, 238, 238)
+}
+
+.menu-navegacion{
+  display: flex;
+   
+  list-style-type: none;
+
+  font-size: 20px;
+
+  flex-direction: row;
+  justify-content: center;
+
+  
+  gap: 20px ;
+
+  text-decoration: underline;
+
+  
+}
+
+aside h3{
+  text-align: center;
+  font-size: 24px;
+
+}
+
+.listado-de-referencias li{
+  line-height: 2;
+}
+
+footer p{
+  font-size: 24px;
+}
+
+.articulos{
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(100px, 1fr));
+  justify-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px 80px;
+
+  
+  
+}
+
+section h2{  
+  grid-column: 1/5;
+  grid-row: 1/2;  
+
+  font-size: 30px;
+}
+
+
+.articulo1{
+  grid-column: 1/3;
+  grid-row: 2/3;
+
+  
+  
+
+}
+
+.articulo2{
+  grid-column: 3/5;
+  grid-row: 2/3;
+}
+
+.articulo3{
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+
+.articulo4{
+  grid-column: 3/5;
+  grid-row: 3/4;
+}
+
+.articulo5{
+  grid-column: 1/3;
+  grid-row: 4/5;
+  
+}
+
+.articulo6{
+  grid-column: 3/5;
+  grid-row: 4/5;
+  
+}
+
+article ul li{
+  line-height: 1.5;
+}
