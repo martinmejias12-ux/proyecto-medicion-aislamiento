@@ -19,7 +19,7 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="motores.html">Motores</a></li>
             <li>Transformadores</li>
-            <li><a href="calculo_aislamiento.html">Calculo de aislamiento</a></li>
+            <li><a href="calculo_aislamiento.html">Cálculo</a></li>
         </ul>
     </nav>
 
@@ -31,8 +31,15 @@
                 <h2>DATOS TÉCNICOS DEL EQUIPO</h2>
                 <tbody>
                     <tr>
-                        <td>Nombre de la maquina:</td>
-                        <td><input type="text" name="nombre-maquina" id="nombre-maquina"></td>
+                        <td>Tipo:</td>
+                        <td>
+
+                            <select name="tipo-equipo" id="tipo-equipo" class="tipo-equipo">
+                                <option value="MOTOR">MOTOR</option>
+                                <option value="TRANSFORMADOR">TRANSFORMADOR</option>
+                            </select>
+                        
+                        </td>
                     </tr>
 
                     <tr>
@@ -41,19 +48,20 @@
                     </tr>
 
                     <tr>
-                        <td>Potencia del motor:</td>
-                        <td><input type="number" name="potencia" id="potencia" placeholder="valor numérico"></td>
+                        <td>Potencia del equipo:</td>
+                        <td><input type="text" name="potencia" id="potencia"></td>
+                        
                     </tr>
                     <tr>
                         <td>Voltaje de alimentación:</td>
-                        <td><input type="number" name="voltaje-alimentacion" id="voltaje-alimentacion" placeholder="valor numérico"></td>
+                        <td><input type="text" name="voltaje-alimentacion" id="voltaje-alimentacion"></td>
                     </tr>
                     <tr>
-                        <td>Serial del motor:</td>
+                        <td>Serial del equipo:</td>
                         <td><input type="text" name="serial" id="serail"></td>
                     </tr>
                     <tr>
-                        <td>Código del motor:</td>
+                        <td>Código del equipo:</td>
                         <td><input type="text" name="codigo-motor" id="codigo-motor"></td>
                     </tr>
                     <tr>
@@ -67,10 +75,11 @@
                     <tr>
                         <td>Técnico que realiza la prueba:</td>
                         <td><input type="text" name="nombre-tecnico" id="nombre-tecnico"></td>
-                    </tr>
-                    
+                    </tr>                   
                     
                 </tbody>
+
+
 
             </table>
 
@@ -88,7 +97,7 @@
                     </tr>
                 </tbody>
 
-                <table id="valores-aislamiento">
+                <table id="valores-aislamiento" class="valores-aislamiento">
 
                     <tbody>
 

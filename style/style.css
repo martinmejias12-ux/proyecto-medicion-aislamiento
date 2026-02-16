@@ -3,8 +3,14 @@
   box-sizing: border-box;
 
   font-family: 'Times New Roman', Times, serif;
-  /*margin: 0;
-  padding: 0;*/
+
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: break-word;
+
+
+
+
 }
 
 
@@ -44,6 +50,14 @@ header{
 nav{
   grid-area: nav;
 
+  display: flex;
+  justify-content: center;
+
+
+
+  text-align: center;
+
+
   width: 100%;
   height: 100%;
   
@@ -54,6 +68,9 @@ nav{
 
 main{
   grid-area: main;
+
+  display: flex;
+  justify-content: center;
 
   
 }
@@ -119,6 +136,7 @@ footer{
 aside h3{
   text-align: center;
   font-size: 24px;
+  
 
 }
 
@@ -214,6 +232,9 @@ footer p{
   "articulo11"
   "articulo12"
   "articulo13";
+
+  width: 100%;
+  box-sizing: border-box;
   
 
   line-height: 1.5;
@@ -230,44 +251,110 @@ footer p{
   justify-self: center;
 
   font-size: 30px;
+
+  margin: 0;
 }
 
 
 
 .articulo7{
   grid-area: articulo7;
-
+  
+  min-width: 0;
+  overflow-wrap: break-word;
+  
 }
 
 .articulo8{
   grid-area: articulo8;
+
+  min-width: 0;
+  overflow-wrap: break-word;
+  
 }
 
 .articulo9{
   grid-area: articulo9;
+
+  min-width: 0;
+  overflow-wrap: break-word;
 
 }
 
 .articulo10{
   grid-area: articulo10;
 
+  min-width: 0;
+  overflow-wrap: break-word;
+
 }
 
 .articulo11{
   grid-area: articulo11;
+
+  min-width: 0;
+  overflow-wrap: break-word;
 
 }
 
 .articulo12{
   grid-area: articulo12;
 
+  min-width: 0;
+  overflow-wrap: break-word;
+
 }
 
 .articulo13{
   grid-area: articulo13;
 
+  min-width: 0;
+  overflow-wrap: break-word;
+
 }
 
+
+th, td{
+  border: 1px solid black; 
+  height: 40px;
+
+  width: 100%;
+
+}
+
+table input, select{
+  border: none;
+  outline: none;
+  background: transparent;
+
+  height: 100%;
+  display: block;
+
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+}
+
+.tabla-datos h2{
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.valores-aislamiento{
+
+  margin-top: 30px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 /*AJUSTE DE LOS MEDIA QUERYS */
 
