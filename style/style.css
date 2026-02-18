@@ -1,4 +1,4 @@
-/*RESET UNIVERSAL*/
+/*ATRIBUTOS PARA AJUSTES INICIALES PARA CUALQUIER TIPO DE SISTEMA WEB*/
 *, *::before, *::after {
   box-sizing: border-box;
 
@@ -6,12 +6,55 @@
 
   max-width: 100%;
   min-width: 0;
+
+
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-wrap: break-word;
-
-
-
-
 }
+
+img, video, canvas, svg {
+  display: block;
+  width: 100%;               /* Ocupa el ancho de la celda o contenedor */
+  height: auto;              /* Mantiene la proporción original */
+  object-fit: cover;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  /* Establece proporción estándar de video 16:9 automáticamente */
+  aspect-ratio: 16 / 9; 
+  border: none;              /* Elimina bordes por defecto de iFrames */
+}
+
+html, body {
+  
+  overflow-x: hidden;        /* Evita el scroll horizontal residual */
+  scroll-behavior: smooth;
+}
+
+table input, select{
+  border: none;
+  outline: none;
+  background: transparent;
+
+  height: 100%;
+  display: block;
+
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+}
+
+/**********************************************************/
 
 
 body{
@@ -38,6 +81,8 @@ header{
   
   grid-area: header;
 
+  font-size: clamp(12px, 4vw, 24px);
+
   min-height: 150px;
   text-align: center;
     
@@ -52,10 +97,10 @@ nav{
 
   display: flex;
   justify-content: center;
+  align-items: center;
 
-
-
-  text-align: center;
+  flex-wrap: nowrap; 
+  gap: 20px;
 
 
   width: 100%;
@@ -65,12 +110,42 @@ nav{
   
 }
 
+nav li:hover{
+  background-color: rgb(150, 150, 245);
+  box-shadow: 5px 5px blue; 
+  
+}
+
+
+nav a {
+  color: #000 !important; /* Negro por defecto */
+  
+}
+
+nav a:hover,
+nav a:focus {
+  color: aquamarine !important; /* Blanco al pasar el mouse */
+  
+}
+
+nav li:hover > a {
+  color: aquamarine !important; /* Cambia texto cuando hover en LI */
+}
+
+nav a:visited,
+nav a:active {
+  color: #000 !important; /* Mantiene negro en otros estados */
+}
+
+
 
 main{
   grid-area: main;
 
   display: flex;
   justify-content: center;
+
+  
 
   
 }
@@ -87,7 +162,8 @@ aside{
   max-width: 100%;
   height: auto;
 
-  margin: 20px;
+  margin: 0px;
+  
   
   padding: 10px;
 
@@ -120,15 +196,19 @@ footer{
    
   list-style-type: none;
 
-  font-size: 20px;
+  font-size: clamp(12px, 3.2vw, 20px);
 
   flex-direction: row;
   justify-content: center;
 
   
-  gap: 20px ;
+  gap: 20px;
+  padding: 0 4px;
+
 
   text-decoration: underline;
+
+  white-space: nowrap;
 
   
 }
@@ -154,7 +234,7 @@ footer p{
   justify-items: center;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 20px 80px;  
+  gap: 20px;  
 
 
   grid-template-areas:
@@ -220,8 +300,9 @@ footer p{
   justify-items: left;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 20px 80px;  
+  gap: 30px;  
   
+  margin: 2rem;
 
   grid-template-areas: 
   "titulo"
@@ -322,23 +403,7 @@ th, td{
 
 }
 
-table input, select{
-  border: none;
-  outline: none;
-  background: transparent;
 
-  height: 100%;
-  display: block;
-
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-
-  padding: 0;
-  margin: 0;
-
-  text-align: center;
-}
 
 .tabla-datos h2{
 
@@ -368,6 +433,20 @@ table input, select{
     "footer";
     
     grid-template-columns: 1fr;
+  }
+
+
+  nav{    
+    padding: 10px 0;   
+  }
+
+ 
+
+  .menu-navegacion{
+  
+  /*font-size: clamp(10px, 3.2vw, 14px);*/
+  white-space: nowrap;
+
   }
 
   aside {
