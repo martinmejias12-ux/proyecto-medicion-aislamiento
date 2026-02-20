@@ -1,24 +1,17 @@
 (function () {   
 
-    
     document.addEventListener('DOMContentLoaded', () => {
-
-
 
         // Traerá todos los datos clave,valor de la pagina calculo_aislamiento
         const todosLosCampos = document.querySelectorAll('#calculo-aislamiento input, #calculo-aislamiento select');
 
 
         // llevamos todos los datos obtenidos a un array
-        const listaCampos = Array.from(todosLosCampos);
-
-        //const datosImportantes = document.querySelectorAll('.dato-importante');
-        //const listadoDatosImportantes = Array.from(datosImportantes);
+        const listaCampos = Array.from(todosLosCampos);        
         
         
         // imprimimos loa cantidad de datos para validar si los esta trayendo
         console.log("Campos detectados para navegar:", listaCampos.length);
-
 
 
         /**
@@ -79,14 +72,120 @@
                     }
                 }
 
+
+
+                
+
+
+
+                
+
                 
             });
         });
 
-        console.log('listado de datos importantes: ', listadoDatosImportantes.length);
+
+
+        const botonCalcular = document.getElementById('calcular');
+        const tipoEquipo = document.getElementById('tipo-equipo');
 
         
+        
+        botonCalcular.addEventListener('click', ()=>{
+
+            let temperaturaReferencia;
+
+            switch (tipoEquipo.value) {
+                case "MOTOR":
+
+                    temperaturaReferencia = 40;
+                    
+                    break;
+
+                case "TRANSFORMADOR":
+
+                    temperaturaReferencia = 20;
+                    
+                    break;
+                    
+            
+                default:
+                    break;
+            }
+
+            console.log(temperaturaReferencia);           
+
+
+            const datoTemperatura = document.getElementById('temperatura');
+            let valorTemperatura = parseFloat(datoTemperatura.value)
+            console.log(valorTemperatura);
+
+            if (valorTemperatura.value === "" || Number.isNaN(valorTemperatura)) {
+
+                alert('El campo de "Temperatura de la carcasa del motor" no debe estar vacío');
+                
+                //console.log('debe tener un numero');
+                
+            }else{
+
+                let factorCorreccionTemperatura = 0.5 ** ((temperaturaReferencia-valorTemperatura)/10)
+
+                factorCorreccionTemperatura = Math.round(factorCorreccionTemperatura*1000)/1000
+
+                console.log(factorCorreccionTemperatura);
+
+
+            }
+
+            
+
+
+
+        });
+
+
+
+        
+
+
+        const borrarDatos =document.getElementById('reset');
+    
+        borrarDatos.addEventListener('click', ()=>{
+
+            listaCampos.forEach(elemento =>{
+
+                localStorage.removeItem(elemento.id);
+            });
+
+            listaCampos.forEach(elemento => {
+
+                elemento.value = "";
+                
+            });
+
+        
+
+        
+        });
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
     });
+
+
 
 
 })(); // La función se ejecuta inmediatamente
