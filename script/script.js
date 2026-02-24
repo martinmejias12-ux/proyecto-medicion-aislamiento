@@ -222,7 +222,7 @@
             let valorIndicePolarizacion = 0;
             if (Number.isNaN(valorMedicionAislamiento10min)) {
 
-                alert('El campo de la lectura medida a los 30 seg esta vacío');
+                alert('El campo de la lectura medida a los 10 min esta vacío');
                 
                 
                 
